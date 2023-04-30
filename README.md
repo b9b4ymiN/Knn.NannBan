@@ -1,6 +1,6 @@
-# TypeScript Next.js example
+# Knn : NannBan
 
-This is a really simple project that shows the usage of Next.js with TypeScript.
+Web application information for Khok Nong Na Model : NannBan at Lampang,Thailand
 
 ## Deploy your own
 
@@ -26,7 +26,7 @@ pnpm create next-app --example with-typescript with-typescript-app
 
 Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
 
-## Notes
+## Notes : This Start from Next.js example
 
 This example shows how to integrate the TypeScript type system into Next.js. Since TypeScript is supported out of the box with Next.js, all we have to do is to install TypeScript.
 
