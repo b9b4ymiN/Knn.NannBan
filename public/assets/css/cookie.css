@@ -1,0 +1,323 @@
+html[lang="en"] #cookie,
+html[lang="th"] #cookie {
+  font-family: Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  font-size: 14px !important;
+  line-height: 1.5;
+}
+
+html[lang="en"] #cookie .cookie-setting__title,
+html[lang="th"] #cookie .cookie-setting__title {
+  font-family: Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  font-size: 18px !important;
+}
+
+.cookie-setting__item--highlight html[lang="en"] #cookie .cookie-setting__title,
+.cookie-setting__item--highlight
+  html[lang="th"]
+  #cookie
+  .cookie-setting__title {
+  font-size: 20px !important;
+}
+
+html[lang="en"] #cookie .btn,
+html[lang="th"] #cookie .btn {
+  font-family: Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  font-size: 14px !important;
+}
+
+#cookie {
+  z-index: 99999999;
+  position: relative;
+}
+
+#cookie .cookie {
+  position: fixed;
+  top: 0;
+  z-index: 1025;
+  overflow: hidden;
+}
+
+#cookie .cookie .btn {
+  display: inline-block;
+  min-width: 120px;
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  background-color: transparent;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+#cookie .cookie .btn:hover {
+  background-color: rgba(28, 28, 28, 0.8);
+  outline: none;
+}
+
+#cookie .cookie .btn:focus {
+  outline: none;
+}
+
+#cookie .cookie .btn.btn-light {
+  background-color: #0065ed;
+  border-color: #0065ed;
+}
+
+#cookie .cookie .btn.btn-light:hover {
+  background-color: #015bd1;
+  border-color: #015bd1;
+}
+
+#cookie .cookie .btn-link {
+  display: inline-block;
+  text-decoration: underline;
+}
+
+#cookie .cookie .cookie-notice {
+  position: fixed;
+  z-index: 1052;
+  left: 1rem;
+  bottom: 0.5rem;
+  display: none;
+  align-items: center;
+  width: calc(100% - 4rem);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  background-color: rgba(28, 28, 28, 0.8);
+}
+
+#cookie .cookie .cookie-notice.cookie-notice--show {
+  display: flex;
+  display: -ms-flexbox;
+}
+
+#cookie .cookie .cookie-notice__link {
+  color: #fff;
+  text-decoration: underline;
+}
+
+#cookie .cookie .cookie-notice__link:hover {
+  color: #fff;
+}
+
+#cookie .cookie .cookie-notice__icon {
+  font-size: 28px;
+  padding-right: 1rem;
+}
+
+#cookie .cookie .cookie-notice__text {
+  flex-grow: 1;
+}
+
+#cookie .cookie .cookie-notice__button {
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+  -ms-flex-align: center;
+  margin: auto 0;
+  padding-left: 0.5rem;
+}
+
+#cookie .cookie .cookie-notice__button a {
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 767px) {
+  #cookie .cookie .cookie-notice {
+    flex-direction: column;
+  }
+
+  #cookie .cookie .cookie-notice__button {
+    padding: 0 0.5rem 0 0;
+  }
+
+  #cookie .cookie .cookie-notice__text {
+    margin-bottom: 0.75rem;
+  }
+}
+
+#cookie .cookie-setting {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1054;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  background-color: rgba(28, 28, 28, 0.8);
+  transition: 0.2s ease all;
+  transform: translateX(-100%);
+}
+
+@media (min-width: 576px) {
+  #cookie .cookie-setting {
+    width: 60vw;
+  }
+}
+
+@media (min-width: 992px) {
+  #cookie .cookie-setting {
+    width: 50vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  #cookie .cookie-setting {
+    width: 25vw;
+  }
+}
+
+#cookie .cookie-setting--show {
+  transform: translateX(0);
+}
+
+#cookie .cookie-setting__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0.5rem 1.5rem;
+  overflow: auto;
+}
+
+#cookie .cookie-setting__item:nth-child(n + 2) {
+  margin-top: 1.5rem;
+}
+
+#cookie .cookie-setting__item--highlight {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #fff;
+}
+
+#cookie .cookie-setting__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+#cookie .cookie-setting__title {
+  margin-bottom: 0;
+  color: #fff;
+}
+
+#cookie .cookie-setting__remark {
+  color: #7acea3;
+}
+
+#cookie .cookie-setting__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 50;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 26px;
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: rgba(28, 28, 28, 0.8);
+  border-radius: 4px;
+}
+
+#cookie .cookie-setting__close:hover {
+  text-decoration: none;
+}
+
+#cookie .cookie-setting__body {
+  margin-bottom: 1rem;
+}
+
+#cookie .cookie-button {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 25px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+#cookie .cookie-button:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #fb8484;
+  border-radius: 1rem;
+}
+
+#cookie .cookie-button__point {
+  position: absolute;
+  top: 2px;
+  bottom: 0;
+  left: 2px;
+  display: block;
+  width: 17px;
+  height: 17px;
+  margin: 2px;
+  background-color: #7d7d7d;
+  border: 2px solid #7d7d7d;
+  border-radius: 20px;
+  transform: translateX(0);
+  transition: all 0.2s ease-in 0s;
+}
+
+#cookie .cookie-button--active:before {
+  background-color: #7acea3;
+}
+
+#cookie .cookie-button--active .cookie-button__point {
+  left: 100%;
+  transform: translateX(calc(-100% - 4px));
+}
+
+#cookie .cookie--backdrop {
+  height: 100vh;
+  width: 100vw;
+}
+
+#cookie .cookie--backdrop:before {
+  content: "";
+  position: absolute;
+  z-index: 1054;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#cookie .cookie--theme-2 .cookie-setting {
+  top: 0;
+  left: 100%;
+  transform: translateX(0);
+}
+
+#cookie .cookie--theme-2 .cookie-setting--show {
+  transform: translateX(-100%);
+}
+
+/* repsonsive helper */
+@media (min-width: 1200px) {
+  .d-xl-block {
+    display: block !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .mb-md-0,
+  .my-md-0 {
+    margin-bottom: 0 !important;
+  }
+}
+
+.mr-2,
+.mx-2 {
+  margin-right: 0.5rem !important;
+}
