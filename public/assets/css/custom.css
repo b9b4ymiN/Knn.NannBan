@@ -1,5 +1,17 @@
 .homeBG1 {
-  background-image: url(../img/home/home-bg5.jpg);
+  background-image: url(../img/home/home-bg1.jpg);
+  background-position: bottom center;
+  display: "block";
+}
+
+.homeBG2 {
+  background-image: url(../img/home/home-bg2.jpg);
+  background-position: bottom center;
+  display: "block";
+}
+
+.homeBG3 {
+  background-image: url(../img/home/home-bg2.jpg);
   background-position: bottom center;
   display: "block";
 }

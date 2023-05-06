@@ -1,13 +1,10 @@
-import type { Fancybox as FancyboxType } from "@fancyapps/ui/types";
-import * as Fancyapps from "@fancyapps/ui";
-import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { NextPage } from "next";
+//Fancy
+import Fancybox from "../components/FancyBox";
 
 const IndexPage: NextPage = (props) => {
- 
-
   return (
     <>
       <div className="header">
@@ -62,7 +59,32 @@ const IndexPage: NextPage = (props) => {
           <h2 className="titlePage">
             เ พื่ อ ส ร้ า ง ชี วิ ต ที่ พ อ เ พี ย ง
           </h2>
-          <div className="boxContentCtrl"></div>
+          <div className="boxContentCtrl">
+            <Fancybox
+              options={{
+                Carousel: {
+                  infinite: true,
+                },
+                Navigation: false,
+              }}
+            >
+              <a
+                href="image-a.jpeg"
+                data-fancybox="gallery"
+                data-caption="Caption #1"
+              >
+                <img src="thumbnail-a.jpeg" />
+              </a>
+
+              <a
+                href="image-b.jpeg"
+                data-fancybox="gallery"
+                data-caption="Caption #2"
+              >
+                <img src="thumbnail-b.jpeg" />
+              </a>
+            </Fancybox>
+          </div>
           <div className="boxDetailMain">
             <div className="boxDetail">
               <div className="bgBoxDetail"></div>
