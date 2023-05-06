@@ -19,6 +19,44 @@
   transition: background 1s linear;
 }
 
+.homeBG4 {
+  background-image: url(../img/home/home-bg4.jpg);
+  background-position: bottom center;
+  display: "block";
+  transition: background 1s linear;
+}
+
+.homeBG5 {
+  background-image: url(../img/home/home-bg5.jpg);
+  background-position: bottom center;
+  display: "block";
+  transition: background 1s linear;
+}
+
 .showTranForm {
   transform: translate3d(0px, 0%, 0px);
+}
+
+.showPage {
+  transform: translate3d(0px, 0%, 0px);
+  display: "block";
+  height: "100%";
+  overflow: "hidden";
+  position: "fixed";
+}
+
+.hidePage {
+  transform: translate3d(0px, 100%, 0px);
+  display: "block";
+  height: "100%";
+  overflow: "hidden";
+  position: "fixed";
+}
+
+#about {
+  background-image: url(../img/home/home-bg3.jpg);
+}
+
+.tranFrom {
+  transition: transform 1000ms ease 0s;
 }
