@@ -1,10 +1,40 @@
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { NextPage } from "next";
 //Fancy
 import Fancybox from "../components/FancyBox";
+//Carousel
+import { Carousel } from "react-responsive-carousel";
 
 const IndexPage: NextPage = (props) => {
+  const [homeBGClass, setHomeBGClass] = useState<string>("oneBgPage homeBG1");
+  const [homePageIndex, setHomePageIndex] = useState<number>(0);
+  useEffect(() => {
+    setBackgroundHomePage(homePageIndex);
+
+    //Setting auto move
+    const interval = setInterval(() => {
+      if (homePageIndex < 2) setHomePageIndex(homePageIndex + 1);
+      else if (homePageIndex == 2) setHomePageIndex(0);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [homePageIndex]);
+
+  const setBackgroundHomePage = (pageIndex) => {
+    switch (pageIndex) {
+      case 0:
+        setHomeBGClass("oneBgPage homeBG1");
+        break;
+      case 1:
+        setHomeBGClass("oneBgPage homeBG2");
+        break;
+      case 2:
+        setHomeBGClass("oneBgPage homeBG3");
+        break;
+    }
+  };
+
   return (
     <>
       <div className="header">
@@ -50,7 +80,7 @@ const IndexPage: NextPage = (props) => {
         }}
       >
         <div className="listBgPage showTranForm">
-          <div className="oneBgPage homeBG1"></div>
+          <div className={homeBGClass}></div>
         </div>
         <div
           className="contentPage"
@@ -60,30 +90,24 @@ const IndexPage: NextPage = (props) => {
             เ พื่ อ ส ร้ า ง ชี วิ ต ที่ พ อ เ พี ย ง
           </h2>
           <div className="boxContentCtrl">
-            <Fancybox
-              options={{
-                Carousel: {
-                  infinite: true,
-                },
-                Navigation: false,
-              }}
+            <a
+              className={homePageIndex == 0 ? "action" : ""}
+              onClick={() => setHomePageIndex(0)}
             >
-              <a
-                href="image-a.jpeg"
-                data-fancybox="gallery"
-                data-caption="Caption #1"
-              >
-                <img src="thumbnail-a.jpeg" />
-              </a>
-
-              <a
-                href="image-b.jpeg"
-                data-fancybox="gallery"
-                data-caption="Caption #2"
-              >
-                <img src="thumbnail-b.jpeg" />
-              </a>
-            </Fancybox>
+              0
+            </a>
+            <a
+              className={homePageIndex == 1 ? "action" : ""}
+              onClick={() => setHomePageIndex(1)}
+            >
+              1
+            </a>
+            <a
+              className={homePageIndex == 2 ? "action" : ""}
+              onClick={() => setHomePageIndex(2)}
+            >
+              2
+            </a>
           </div>
           <div className="boxDetailMain">
             <div className="boxDetail">

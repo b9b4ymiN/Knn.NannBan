@@ -2,18 +2,21 @@
   background-image: url(../img/home/home-bg1.jpg);
   background-position: bottom center;
   display: "block";
+  transition: background 1s linear;
 }
 
 .homeBG2 {
   background-image: url(../img/home/home-bg2.jpg);
   background-position: bottom center;
   display: "block";
+  transition: background 1s linear;
 }
 
 .homeBG3 {
-  background-image: url(../img/home/home-bg2.jpg);
+  background-image: url(../img/home/home-bg3.jpg);
   background-position: bottom center;
   display: "block";
+  transition: background 1s linear;
 }
 
 .showTranForm {

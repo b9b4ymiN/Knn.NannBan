@@ -394,7 +394,7 @@ home ====================================== */
 }
 #home .boxContentCtrl a:hover,
 #home .boxContentCtrl a.action {
-  /* background: #fff; */
+   background: #fff; 
   opacity: 0.6;
 }
 #home .boxDetailMain {
